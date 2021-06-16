@@ -1,9 +1,9 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
-int max(int num[], int s)
+int max(int num[], int size)
 {
   int max= -999999;
-  for(int i=0;i<s;i++)
+  for(int i=0;i<size;i++)
   {
     if(num[i]>max)
     {
