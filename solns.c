@@ -2,7 +2,7 @@
 #include <stdio.h>
 int max(int num[], int s)
 {
-  int max= num[0];
+  int max= -999999;
   for(int i=0;i<s;i++)
   {
     if(num[i]>max)
@@ -15,7 +15,7 @@ int max(int num[], int s)
 
 int min(int num[], int s)
 {
-  int min= num[0];
+  int min= 999999;
   for(int i=0;i<s;i++)
   {
     if(num[i]<min)
@@ -31,9 +31,9 @@ float average(int num[], int s)
   float total = 0;
   for(int i=0;i< s;i++)
   {
-    sum += num[i];
+    total +=num[i];
   }
-  return (sum/size);
+  return (total/size);
 }
 
 int mode(int num[], int s)
@@ -41,6 +41,12 @@ int mode(int num[], int s)
   int c[s];
   int index =0;
   int max = -999999;
+  
+  for(int x=0;x<s;x++)
+  {
+    c[x]=0;
+  }
+  
   for(int i =0; i<size; i++)
   {
     for(int j=0; j< size; j++)
@@ -51,6 +57,7 @@ int mode(int num[], int s)
       }
     }
   }
+  
   for(int k= 0;k<s;k++)
   {
     if(cnt[k] > max)
@@ -69,7 +76,7 @@ int factors(int num; int prf[])
   int np = (int)(sizeof(pf)/sizeof(int));
   for(;temp!=i;i++)
   {
-    for(int j=0; j,np;j++)
+    for(int j=0; j<np;j++)
      {
             if((temp%pf[j])==0)//check the divisibility with primes
             {
