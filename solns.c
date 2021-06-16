@@ -70,17 +70,17 @@ int mode(int num[], int s)
 
 int factors(int num, int prf[])
 {
-  int temp = num;
-  int i=0;
-  int pf[]={2,3,5,7,9,11,13,17,19};
-  int np = (int)(sizeof(pf)/sizeof(int));
-  for(;temp!=i;i++)
-  {
-    for(int j=0; j<np;j++)
-     {
-            if((temp%pf[j])==0)//check the divisibility with primes
+    int temp=num;
+    int i=0;
+    int pf[]={2,3,5,7,9,11,13,17,19};
+    int prno=(int)(sizeof(pf)/sizeof(int));
+    for(;temp!=1;i++)
+    {
+        for(int j=0;j<prno;j++)
+        {
+            if((temp%pf[j])==0)
             {
-                prf[i]=pf[j];//store prime factors in pfact array
+                prf[i]=pf[j];
                 temp/=pf[j];
                 break;
             }
@@ -92,4 +92,3 @@ int factors(int num, int prf[])
     }
     return i;
 } 
-    
