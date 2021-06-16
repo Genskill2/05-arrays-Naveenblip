@@ -33,7 +33,7 @@ float average(int num[], int s)
   {
     total +=num[i];
   }
-  return (total/size);
+  return (total/s);
 }
 
 int mode(int num[], int s)
@@ -47,9 +47,9 @@ int mode(int num[], int s)
     c[x]=0;
   }
   
-  for(int i =0; i<size; i++)
+  for(int i =0; i<s; i++)
   {
-    for(int j=0; j< size; j++)
+    for(int j=0; j< s; j++)
     {
       if num[i] == num [j]
       {
