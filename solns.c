@@ -51,7 +51,7 @@ int mode(int num[], int s)
   {
     for(int j=0; j< s; j++)
     {
-      if num[i] == num [j]
+      if (num[i] == num [j])
       {
         c[i]++;
       }
