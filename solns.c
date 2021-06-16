@@ -60,15 +60,15 @@ int mode(int num[], int s)
   
   for(int k= 0;k<s;k++)
   {
-    if(cnt[k] > max)
+    if(c[k] > max)
     {
-      index=i;
+      index=k;
     }
   }
   return(num[index]);
 }
 
-int factors(int num; int prf[])
+int factors(int num, int prf[])
 {
   int temp = num;
   int i=0;
